@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+<body>
+  <div class = "main container-fluid text-center">
+    <h1>Quote Generator</h1>
+    <hr>
+    <p class="p1">A Few Quotes to Help Make Today Your Best Day Yet!!!</p>
+    <img class="center-block img" alt="Sky Photo image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQGEZnlTuskX1ckJ0TyWdo7kOnjaO5aTNNlsv9WikTjd3r038YFVA">
+    <br/>
+    <br/>
+    <div>
+      <btn class="btn btn-default" type="submit">Today's Quote</btn>
+      <br>
+      <a href="#" target="_blank"><img src="http://www.niftybuttons.com/ChrisWallace_Large/twitter.png" title="(Buttons by NiftyButtons.com)" border="0" style="margin:1px;" id="tweet">Click to Tweet</a>
+    </div>
+    <br/>
+    <div class= "quote-border center-block container">
+      <br/>
+      <span class ="quote">" Injustice anywhere is a threat to justice everywhere. "</span>
+      <br/>
+      <span class = "author">"- Dr. Martin Luther King, Jr."</span>
+    </div>
+  </div>
+ <footer>
+   <% include ../partials/footer.ejs %>
+   <script>
+   //credit Wikipedia for author and qoute source.
+   $(document).ready(function(){
+     var getQuote1;
+     var getQuote2;
+     var getAuthor;
+
+   //get the quote and display or tweet
+   function wikiQuote(){
+       var quotes = ["Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope.","When someone shows you who they are, believe them the first time.","You may not control all the events that happen to you, but you can decide not to be reduced by them.","Nothing will work unless you do.","My mission in life is not merely to survive, but to thrive; and to do so with some passion, some compassion, some humor, and some style.", "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.","The ultimate measure of a man is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.","Faith is taking the first step even when you don't see the whole staircase.","Our lives begin to end the day we become silent about things that matter.","Injustice anywhere is a threat to justice everywhere."];
+       var author = ["- Maya Angelou","- Maya Angelou","- Maya Angelou","- Maya Angelou","- Maya Angelou","- Dr. Martin Luther King, Jr.","- Dr. Martin Luther King, Jr.","- Dr. Martin Luther King, Jr.","- Dr. Martin Luther King, Jr.","- Dr. Martin Luther King, Jr."];
+
+         getQuote1 = Math.floor((Math.random()*quotes.length))
+         getQuote2 = quotes[getQuote1];
+         getAuthor = author[getQuote1];
+      $(".quote").text(getQuote2 );
+      $(".author").text(getAuthor);
+      }
+     $("#tweet").on("click", function(){
+       window.open("https://twitter.com/intent/tweet?text=" + getQuote2 + "  " + getAuthor);
+     });
+     $(".btn").on("click", function(){
+       wikiQuote();
+     });
+   });
+   </script>
+ </footer>
+</html>
+</body>

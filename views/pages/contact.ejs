@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+<body>
+  <% include ../partials/navbar.ejs %>
+
+      <div class="container-fluid text-center">
+        <div class="jumbotron ">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <h1>Contact Me At:</h1>
+                <hr>
+                <br>
+                <div class="col-md-4 col-md-offset-4"><a href="https://twitter.com/brgproductsllc " target="_blank " ><img src="http://www.niftybuttons.com/ChrisWallace_Large/twitter.png " title="(Morty Buckles Twitter) " border="0 " style="margin:1px; "></a>
+                <br>
+                <a href="https://www.facebook.com/BRG-Products-LLC-157357097687008/ " target="_blank " ><img src="http://www.niftybuttons.com/ChrisWallace_Large/facebook.png " title="(Morty Buckles Facebook) " border="0 " style="margin:1px; "></a>
+                <br>
+                <a href="https://www.linkedin.com/in/morty-buckles-0198226 " target="_blank " ><img src="http://www.niftybuttons.com/ChrisWallace_Large/linkedin.png " title="(Morty Buckles Linkedin) " border="0 " style="margin:1px; "></a>
+                <br>
+                <a  class="glyphicon glyphicon-envelope" aria-hidden="true" title="(Morty Buckles Email) " href= "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=bucklesm21@gmail.com&su=Portfolio%20Inquiry&body=" target="_blank" ></a>
+
+              </div>
+            </div>
+      </div>
+
+ <footer>
+   <script>
+   // init Isotope
+   var $container = $('.portfolio-items').isotope('layout');
+   // filter items on button click
+   $('.portfolio-filter').on( 'click', 'a', function(e) {
+     e.preventDefault();
+     var filterValue = $(this).attr('data-filter');
+     $container.isotope({ filter: filterValue });
+
+     $('.portfolio-filter li').removeClass('active');
+     $(this).closest('li').addClass('active');
+   })
+   </script>
+ </footer>
+</html>
+</body>

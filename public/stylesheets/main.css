@@ -1,0 +1,83 @@
+/*Footer*/
+footer {
+  margin-top: 5rem;
+}
+i.fa.fa-github {
+  margin-left: 15px;
+  margin-top:5px;
+  font-size: 3.5em;
+  vertical-align: middle;
+}
+a.glyphicon.glyphicon-envelope {
+  margin-left: 10px;
+  margin-top:5px;
+  font-size: 2.5em;
+  top: 0.5em;
+}
+/* End Footer*/
+
+body, html{
+  color:#FCFBE3;
+  background: #951B02;
+  font-family: New Times Roman;
+height: 100%;
+}
+h4 {
+  color: blue;
+  font-style:italic;
+}
+.btn{
+  font-size: 1.3em;
+  background-color: #FCFBE3;
+  border-style: solid;
+    border-color: silver;
+    border-width: 3px;
+    box-shadow: 2px 2px 2px grey;
+    margin-bottom: 2rem;
+}
+h1 {
+  font-family:Lobster, Monospace;
+}
+hr{
+  width:35%;
+}
+.p1{
+  color:#FCFBE3;
+  font-style: italic;
+  font-size: 20px;
+
+}
+.quote-border{
+  color:black;
+  height:160px;
+  width: 65%;
+  background-color: #FCFBE3;
+    border-style: solid;
+    border-color: silver;
+    border-width: 3px;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 10px;
+}
+.quote {
+  font-size: 25px;
+  font-style:italic;
+  padding: 40px;
+}
+.author{
+  font-size: 20px;
+  padding:30px;
+}
+.img {
+  padding: 0px;
+  box-shadow: 5px 5px 5px grey;
+    border-radius: 10px;
+  width: 440px;
+}
+a {
+    color: #90e5ff;
+    text-decoration: none;
+}
+a:hover {
+  color: #FCFBE3;
+    text-decoration: none;
+}
